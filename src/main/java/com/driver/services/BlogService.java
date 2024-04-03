@@ -22,7 +22,7 @@ public class BlogService {
         //create a blog at the current time
         Blog obj=new Blog(title,content);
         User x= userRepository1.findById(userId).get();
-        obj.setPub(new Date());
+        obj.setPubDate(new Date());
         obj.setUser(x);
         List<Blog> arr=x.getArr();
         arr.add(obj);
