@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @Entity
 public class Image {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
@@ -13,19 +14,12 @@ public class Image {
     String description;
     String dimension;
 
-    public Image(){
+    public Image() {
 
     }
-    public Image( String description, String dimension) {
+
+    public Image(String description, String dimension) {
         this.description = description;
-        this.dimension = dimension;
-    }
-
-    public String getDimension() {
-        return dimension;
-    }
-
-    public void setDimension(String dimension) {
         this.dimension = dimension;
     }
 
